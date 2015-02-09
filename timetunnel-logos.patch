@@ -1,0 +1,8 @@
+230c230,234
+< - GL: 				timetunnel -root			    \n\
+---
+>   GL: 				timetunnel -root -tardis		      \
+> 				  $HOME/icons/timetunnel/tardis.xpm -head     \
+> 				  $HOME/icons/timetunnel/whohead1.xpm	      \
+> 				  -marquee				      \
+> 				  $HOME/icons/timetunnel/whologo.xpm	    \n\

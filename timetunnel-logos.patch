@@ -1,8 +1,9 @@
-230c230,234
-< - GL: 				timetunnel -root			    \n\
+230c230,235
+<   GL: 				timetunnel -root			    \n\
 ---
 >   GL: 				timetunnel -root -tardis		      \
-> 				  $HOME/icons/timetunnel/tardis.xpm -head     \
-> 				  $HOME/icons/timetunnel/whohead1.xpm	      \
+> 				  $HOME/.local/share/icons/xscreensaver/timetunnel/tardis.xpm   \
+> 				  -head					      \
+> 				  $HOME/.local/share/icons/xscreensaver/timetunnel/whohead1.xpm   \
 > 				  -marquee				      \
-> 				  $HOME/icons/timetunnel/whologo.xpm	    \n\
+> 				  $HOME/.local/share/icons/xscreensaver/timetunnel/whologo.xpm \n\

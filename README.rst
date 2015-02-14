@@ -11,6 +11,7 @@ Installing timetunnel logos.
 Installation instructions.
 --------------------------
 
+#. Make sure ``timetunnel`` is installed. On Debian it is in the ``xscreensaver-gl-extra`` package.
 #. Download the scripts and patchfile.
 #. Run ``make``.
 #. Run ``xscreensaver-demo`` to make sure that it worked.

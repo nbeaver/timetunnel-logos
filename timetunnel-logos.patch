@@ -1,9 +1,14 @@
-230c230,235
-<   GL: 				timetunnel -root			    \n\
----
->   GL: 				timetunnel -root -tardis		      \
-> 				  $HOME/.local/share/icons/xscreensaver/timetunnel/tardis.xpm   \
-> 				  -head					      \
-> 				  $HOME/.local/share/icons/xscreensaver/timetunnel/whohead1.xpm   \
-> 				  -marquee				      \
-> 				  $HOME/.local/share/icons/xscreensaver/timetunnel/whologo.xpm \n\
+@@ -227,7 +227,12 @@
+ - GL: 				fliptext -root				    \n\
+ - GL: 				glhanoi -root				    \n\
+ - GL: 				tangram -root				    \n\
+-  GL: 				timetunnel -root			    \n\
++  GL: 				timetunnel -root -tardis		      \
++				  $HOME/.local/share/icons/xscreensaver/timetunnel/tardis.xpm   \
++				  -head					      \
++				  $HOME/.local/share/icons/xscreensaver/timetunnel/whohead1.xpm   \
++				  -marquee				      \
++				  $HOME/.local/share/icons/xscreensaver/timetunnel/whologo.xpm \n\
+ - GL: 				glschool -root				    \n\
+   GL: 				topblock -root				    \n\
+   GL: 				cubicgrid -root -speed 0.2 -zoom 30	    \n\

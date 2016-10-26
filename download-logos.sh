@@ -21,7 +21,7 @@ then
     exit 1
 fi
 
-if ! tar --ungzip --extract --file "${TARFILE}" --directory "${TMPDIR}"
+if ! tar -z -x -f "${TARFILE}" -C "${TMPDIR}"
 then
     printf "Error: could not untar: ${TARFILE}\n" >&2
     exit 1

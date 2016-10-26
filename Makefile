@@ -4,7 +4,7 @@ LOGOS = $(ICONDIR)/tardis.xpm $(ICONDIR)/whohead1.xpm $(ICONDIR)/whologo.xpm
 
 $(LOGOS) : download-logos.sh
 	./download-logos.sh
-install: download Makefile patch-xscreensaver-config.sh timetunnel-logos.patch
+install: download patch-xscreensaver-config.sh timetunnel-logos.patch
 	./patch-xscreensaver-config.sh
-download : Makefile download-logos.sh
+download : download-logos.sh
 	./download-logos.sh

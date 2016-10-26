@@ -14,13 +14,18 @@ then
 fi
 
 TMPDIR=$(mktemp -d)
-if ! wget --output-document="${TMPDIR}/timetunnel-4.22.tar.gz" "${URL}"
+TARFILE="${TMPDIR}/timetunnel.tar.gz"
+if ! wget --output-document="${TARFILE}" "${URL}"
 then
     printf "Error: could not download from URL: ${URL}\n" >&2
     exit 1
 fi
 
-tar --ungzip --extract --file "${TMPDIR}/timetunnel-4.22.tar.gz" --directory "${TMPDIR}"
+if ! tar --ungzip --extract --file "${TARFILE}" --directory "${TMPDIR}"
+then
+    printf "Error: could not untar: ${TARFILE}\n" >&2
+    exit 1
+fi
 
 if ! test -d "${INSTALL}"
 then
@@ -28,5 +33,25 @@ then
     exit 1
 fi
 
-cp "${TMPDIR}/xscreensaver-4.22/hacks/images/"{tardis.xpm,whohead1.xpm,whologo.xpm} "${INSTALL}"
-echo "Copied images to ${INSTALL}"
+ICON1="${TMPDIR}/xscreensaver-4.22/hacks/images/tardis.xpm"
+if ! test -f "${ICON1}"
+then
+    printf "Error: missing icon should be at: ${ICON1}\n" >&2
+    exit 1
+fi
+ICON2="${TMPDIR}/xscreensaver-4.22/hacks/images/whohead1.xpm"
+if ! test -f "${ICON2}"
+then
+    printf "Error: missing icon should be at: ${ICON2}\n" >&2
+    exit 1
+fi
+ICON3="${TMPDIR}/xscreensaver-4.22/hacks/images/whologo.xpm"
+if ! test -f "${ICON3}"
+then
+    printf "Error: missing icon should be at: ${ICON3}\n" >&2
+    exit 1
+fi
+if ! cp "${ICON1}" "${ICON2}" "${ICON3}" "${INSTALL}"
+    printf "Error: cannot copy to: ${INSTALL}\n" >&2
+    exit 1
+fi

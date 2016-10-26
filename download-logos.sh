@@ -59,6 +59,7 @@ then
     exit 1
 fi
 if ! cp "${ICON1}" "${ICON2}" "${ICON3}" "${INSTALL}"
+then
     printf "Error: cannot copy to: ${INSTALL}\n" >&2
     exit 1
 fi

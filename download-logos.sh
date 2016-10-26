@@ -1,6 +1,10 @@
 #! /usr/bin/env bash
 
 INSTALL="$HOME/.local/share/icons/xscreensaver/timetunnel"
+if ! test -d "${INSTALL}"
+then
+    mkdir "${INSTALL}"
+fi
 # Check if any of the images are missing.
 if [[ -f "$INSTALL/tardis.xpm" && -f "$INSTALL/whohead1.xpm" && -f "$INSTALL/whologo.xpm" ]]; then
 	echo "Already installed images in $INSTALL"

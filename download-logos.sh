@@ -8,9 +8,10 @@ then
 fi
 INSTALL="$1"
 
-if ! test -d "${INSTALL}"
+if ! mkdir -p "${INSTALL}"
 then
-    mkdir -p "${INSTALL}"
+    printf "Error: could not mkdir: ${INSTALL}\n" >&2
+    exit 1
 fi
 # Check if any of the images are missing.
 if test -f "${INSTALL}/tardis.xpm" && test -f "${INSTALL}/whohead1.xpm" && test -f "${INSTALL}/whologo.xpm"

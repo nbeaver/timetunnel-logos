@@ -11,4 +11,4 @@ then
     exit 1
 fi
 
-patch --unified --forward --fuzz "$HOME/.xscreensaver" "$script_dir/timetunnel-logos.patch";
+patch --unified --forward --fuzz "$HOME/.xscreensaver" "$script_dir/timetunnel-logos.patch"

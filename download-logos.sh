@@ -4,7 +4,7 @@ URL="http://www.zettix.com/Graphics/timetunnel/timetunnel-4.22.tar.gz"
 INSTALL="$HOME/.local/share/icons/xscreensaver/timetunnel"
 if ! test -d "${INSTALL}"
 then
-    mkdir "${INSTALL}"
+    mkdir -p "${INSTALL}"
 fi
 # Check if any of the images are missing.
 if test -f "${INSTALL}/tardis.xpm" && test -f "${INSTALL}/whohead1.xpm" && test -f "${INSTALL}/whologo.xpm"

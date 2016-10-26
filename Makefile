@@ -1,4 +1,5 @@
-LOGOS = $(HOME)/.local/share/icons/xscreensaver/timetunnel/tardis.xpm $(HOME)/.local/share/icons/xscreensaver/timetunnel/whohead1.xpm $(HOME)/.local/share/icons/xscreensaver/timetunnel/whologo.xpm
+ICONDIR = $(HOME)/.local/share/icons/xscreensaver/timetunnel/
+LOGOS = $(ICONDIR)/tardis.xpm $(ICONDIR)/whohead1.xpm $(ICONDIR)/whologo.xpm
 # Prevent make from looking for a file called 'install'
 .PHONY : install
 # Prevent make from running multiple downloads.

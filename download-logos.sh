@@ -1,7 +1,13 @@
 #! /usr/bin/env bash
 
 URL="http://www.zettix.com/Graphics/timetunnel/timetunnel-4.22.tar.gz"
-INSTALL="$HOME/.local/share/icons/xscreensaver/timetunnel"
+if test $# -ne 1
+then
+    printf "Usage: $0 $HOME/.local/share/icons/xscreensaver/timetunnel\n" >&2
+    exit 1
+fi
+INSTALL="$1"
+
 if ! test -d "${INSTALL}"
 then
     mkdir -p "${INSTALL}"

@@ -67,3 +67,11 @@ This has only been tested with XScreenSaver 5.15 on Debian Wheezy.
 
 It might be nice to be able to choose the installation directory by editing the Makefile,
 but this would require some fiddling to generate the patchfile.
+
+-------
+License
+-------
+
+This project is licensed under the terms of the `MIT license`_.
+
+.. _MIT license: LICENSE.txt

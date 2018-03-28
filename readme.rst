@@ -12,7 +12,7 @@ Installation instructions.
 --------------------------
 
 #. Make sure ``timetunnel`` is installed. On Debian it is in the ``xscreensaver-gl-extra`` package.
-#. Download the scripts and patchfile.
+#. Download the git repository.
    
    ::
 
@@ -22,6 +22,10 @@ Installation instructions.
 #. Run ``make install`` to download and install the logos
    and patch ``~/.xscreensaver``.
 #. Run ``make demo`` to make sure that it worked.
+
+----------
+Background
+----------
 
 The `timetunnel`_ screensaver by Sean Brennan
 is a delightful tribute to the famous BBC sci-fi series "`Doctor Who`_",

@@ -22,4 +22,4 @@ $(TEST_LOGOS) : download-logos.sh
 	./download-logos.sh $(TESTDIR)
 
 clean :
-	rm -f test/*
+	rm -f -- $(TEST_LOGOS)

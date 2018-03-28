@@ -30,6 +30,9 @@ test : $(TEST_LOGOS)
 timetunnel-logos.patch : xscreensaver-unpatched.txt
 	diff xscreensaver-unpatched.txt xscreensaver-patched.txt > $@ || if test $$? -eq 1; then exit 0; else exit 1; fi
 
+readme.html : readme.rst
+	rst2html $< $@
+
 $(TEST_LOGOS) : download-logos.sh
 	./download-logos.sh $(TESTDIR)
 

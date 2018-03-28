@@ -19,6 +19,7 @@ demo-no-install : $(TEST_LOGOS)
 	/usr/lib/xscreensaver/timetunnel -tardis $(TESTDIR)/tardis.xpm -head $(TESTDIR)/whohead1.xpm -marquee $(TESTDIR)/whologo.xpm
 
 test : $(TEST_LOGOS)
+	./patch-xscreensaver-config.sh xscreensaver.txt
 
 timetunnel-logos.patch : xscreensaver-unpatched.txt
 	diff xscreensaver-unpatched.txt xscreensaver-patched.txt > $@ || if test $$? -eq 1; then exit 0; else exit 1; fi
@@ -28,3 +29,4 @@ $(TEST_LOGOS) : download-logos.sh
 
 clean :
 	rm -f -- $(TEST_LOGOS)
+	cp xscreensaver-unpatched.txt xscreensaver.txt

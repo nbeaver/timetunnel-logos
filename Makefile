@@ -8,7 +8,7 @@ $(LOGOS) : download-logos.sh
 	./download-logos.sh $(ICONDIR)
 
 install: download patch-xscreensaver-config.sh timetunnel-logos.patch
-	./patch-xscreensaver-config.sh
+	./patch-xscreensaver-config.sh ~/.xscreensaver
 
 download : download-logos.sh
 	./download-logos.sh $(ICONDIR)

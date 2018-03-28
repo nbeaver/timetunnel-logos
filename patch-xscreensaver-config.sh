@@ -10,13 +10,12 @@ CONFIG_FILE="$1"
 
 patch "${CONFIG_FILE}" << EOF
 227c227,232
-< - GL: 				timetunnel -root			    \n\
+< - GL: 				timetunnel -root			    \n\\
 ---
->   GL: 				timetunnel -root -tardis		      \
-> 				  $HOME/.local/share/icons/xscreensaver/timetunnel/tardis.xpm   \
-> 				  -head					      \
-> 				  $HOME/.local/share/icons/xscreensaver/timetunnel/whohead1.xpm   \
-> 				  -marquee				      \
-> 				  $HOME/.local/share/icons/xscreensaver/timetunnel/whologo.xpm \n\
-
+>   GL: 				timetunnel -root -tardis		      \\
+> 				  \$HOME/.local/share/icons/xscreensaver/timetunnel/tardis.xpm   \\
+> 				  -head					      \\
+> 				  \$HOME/.local/share/icons/xscreensaver/timetunnel/whohead1.xpm   \\
+> 				  -marquee				      \\
+> 				  \$HOME/.local/share/icons/xscreensaver/timetunnel/whologo.xpm \n\\
 EOF

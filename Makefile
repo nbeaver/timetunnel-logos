@@ -16,6 +16,9 @@ download : download-logos.sh
 demo :
 	./demo.sh
 
+demo-no-install : $(TEST_LOGOS)
+	/usr/lib/xscreensaver/timetunnel -tardis $(TESTDIR)/tardis.xpm -head $(TESTDIR)/whohead1.xpm -marquee $(TESTDIR)/whologo.xpm
+
 test : $(TEST_LOGOS)
 
 $(TEST_LOGOS) : download-logos.sh

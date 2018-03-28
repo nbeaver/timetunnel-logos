@@ -2,7 +2,7 @@
 
 wget --no-verbose --no-clobber --recursive --level=1 --no-parent --no-directories \
   --accept xpm \
-  -P ~/.local/share/icons/xscreensaver/timetunnel \
+  --directory-prefix=~/.local/share/icons/xscreensaver/timetunnel \
   'http://www.zettix.com/Graphics/timetunnel/xscreensaver-4.22/hacks/images/'
 
 patch ~/.xscreensaver << EOF

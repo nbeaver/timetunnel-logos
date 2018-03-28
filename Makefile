@@ -4,9 +4,6 @@ TESTDIR = ./test
 TEST_LOGOS = $(TESTDIR)/tardis.xpm $(TESTDIR)/whohead1.xpm $(TESTDIR)/whologo.xpm
 .PHONY : install download test clean
 
-$(LOGOS) : download-logos.sh
-	./download-logos.sh $(ICONDIR)
-
 install: download patch
 
 download : download-logos.sh

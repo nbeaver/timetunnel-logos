@@ -47,6 +47,23 @@ Just run ``make``.
 
 Enjoy!
 
+---------------
+Troubleshooting
+---------------
+
+If you have changed the ``timetunnel`` line in ``~/.xscreensaver``,
+the patch may fail. In that case, run
+
+::
+
+    $ xscreensaver-demo
+
+and under "Display Modes" navigate to "TimeTunnel",
+then press the "Settings..." button.
+Click "Advanced >>" and enter this as the "Command Line:" entry::
+
+    timetunnel -root -tardis $HOME/.local/share/icons/xscreensaver/timetunnel/tardis.xpm -head $HOME/.local/share/icons/xscreensaver/timetunnel/whohead1.xpm -marquee $HOME/.local/share/icons/xscreensaver/timetunnel/whologo.xpm
+
 ------------------
 Technical details.
 ------------------

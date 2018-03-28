@@ -7,11 +7,13 @@ TEST_LOGOS = $(TESTDIR)/tardis.xpm $(TESTDIR)/whohead1.xpm $(TESTDIR)/whologo.xp
 $(LOGOS) : download-logos.sh
 	./download-logos.sh $(ICONDIR)
 
-install: download patch-xscreensaver-config.sh timetunnel-logos.patch
-	./patch-xscreensaver-config.sh ~/.xscreensaver
+install: download patch
 
 download : download-logos.sh
 	./download-logos.sh $(ICONDIR)
+
+patch : patch-xscreensaver-config.sh
+	./patch-xscreensaver-config.sh ~/.xscreensaver
 
 demo :
 	./demo.sh

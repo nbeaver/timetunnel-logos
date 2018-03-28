@@ -2,11 +2,12 @@ ICONDIR = $(HOME)/.local/share/icons/xscreensaver/timetunnel/
 LOGOS = $(ICONDIR)/tardis.xpm $(ICONDIR)/whohead1.xpm $(ICONDIR)/whologo.xpm
 TESTDIR = ./test
 TEST_LOGOS = $(TESTDIR)/tardis.xpm $(TESTDIR)/whohead1.xpm $(TESTDIR)/whologo.xpm
-.PHONY : install download patch demo test clean
+.PHONY : install download-logos patch demo test clean
 
-install: download patch
+install:
+	./install.sh
 
-download : download-logos.sh
+download-logos : download-logos.sh
 	./download-logos.sh $(ICONDIR)
 
 patch : patch-xscreensaver-config.sh

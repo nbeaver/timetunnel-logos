@@ -64,25 +64,6 @@ Click "Advanced >>" and enter this as the "Command Line:" entry::
 
     timetunnel -root -tardis $HOME/.local/share/icons/xscreensaver/timetunnel/tardis.xpm -head $HOME/.local/share/icons/xscreensaver/timetunnel/whohead1.xpm -marquee $HOME/.local/share/icons/xscreensaver/timetunnel/whologo.xpm
 
-------------------
-Technical details.
-------------------
-
-The `download-logos.sh <./download-logos.sh>`_ script does this:
-
-#. Check ``~/.local/share/icons/xscreensaver/timetunnel`` for images named ``tardis.xpm``, ``whohead1.xpm``, and ``whologo.xpm``.
-#. Do nothing if they already exist, otherwise:
-#. Use ``wget`` to download a tar file into ``/tmp/``.
-#. Unzip the tar file into ``/tmp/``.
-#. Copy some of the unzipped images to ``~/.local/share/icons/xscreensaver/timetunnel``.
-
-The `patch-xscreensaver-config.sh <./patch-xscreensaver-config.sh>`_ script does this:
-
-#. Try to find the ``timetunnel-logos.patch`` patchfile in the directory the script was called from.
-#. Patch ``~/.xscreensaver`` so that XScreensaver can find the icons.
-
-The makefile just runs both of the scripts.
-
 -------
 License
 -------

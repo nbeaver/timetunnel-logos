@@ -13,6 +13,9 @@ install: download patch-xscreensaver-config.sh timetunnel-logos.patch
 download : download-logos.sh
 	./download-logos.sh $(ICONDIR)
 
+demo :
+	./demo.sh
+
 test : $(TEST_LOGOS)
 
 $(TEST_LOGOS) : download-logos.sh

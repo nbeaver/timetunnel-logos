@@ -83,15 +83,6 @@ The `patch-xscreensaver-config.sh <./patch-xscreensaver-config.sh>`_ script does
 
 The makefile just runs both of the scripts.
 
-----
-TODO
-----
-
-This has only been tested with XScreenSaver 5.15 on Debian Wheezy.
-
-It might be nice to be able to choose the installation directory by editing the Makefile,
-but this would require some fiddling to generate the patchfile.
-
 -------
 License
 -------

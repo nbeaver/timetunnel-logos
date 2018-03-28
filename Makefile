@@ -2,6 +2,7 @@ ICONDIR :=$(HOME)/.local/share/icons/xscreensaver/timetunnel/
 LOGOS :=$(ICONDIR)/tardis.xpm $(ICONDIR)/whohead1.xpm $(ICONDIR)/whologo.xpm
 TESTDIR :=./test
 TEST_LOGOS :=$(TESTDIR)/tardis.xpm $(TESTDIR)/whohead1.xpm $(TESTDIR)/whologo.xpm
+SH :=$(wildcard *.sh)
 .PHONY : install uninstall download-logos patch demo test clean
 
 install:
@@ -31,6 +32,9 @@ timetunnel-logos.patch : xscreensaver-unpatched.txt
 
 $(TEST_LOGOS) : download-logos.sh
 	./download-logos.sh $(TESTDIR)
+
+shellcheck :
+	shellcheck $(SH)
 
 clean :
 	rm -f -- $(TEST_LOGOS)
